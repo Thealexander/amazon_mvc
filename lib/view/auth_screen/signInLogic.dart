@@ -1,7 +1,5 @@
 // ignore_for_file: use_build_context_synchronously
-
 import 'dart:developer';
-
 import 'package:amazon_app/controller/services/user_data_crud_services/user_data_CRUD_services.dart';
 import 'package:amazon_app/view/auth_screen/auth_screens.dart';
 import 'package:amazon_app/view/seller/seller_persistant_nav_bar/seller_bottom_nav_bar.dart';
@@ -10,8 +8,8 @@ import 'package:amazon_app/view/user/user_persistant_nav_bar/user_bottom_nav_bar
 import 'package:flutter/material.dart';
 import 'package:page_transition/page_transition.dart';
 import '../../controller/services/auth_services/auth_services.dart';
-//import '../user/home/home_screen.dart';
 
+//import '../user/home/home_screen.dart';
 class SignInLogic extends StatefulWidget {
   const SignInLogic({super.key});
 

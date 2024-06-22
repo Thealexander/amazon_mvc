@@ -7,7 +7,7 @@ import 'package:amazon_app/constants/common_functions.dart';
 import 'package:amazon_app/controller/provier/product_provider/product_provider.dart';
 import 'package:amazon_app/model/product_model.dart';
 import 'package:cloud_firestore/cloud_firestore.dart';
-import 'package:firebase_storage/firebase_storage.dart';
+//import 'package:firebase_storage/firebase_storage.dart';
 import 'package:flutter/material.dart';
 import 'package:image_picker/image_picker.dart';
 import 'package:provider/provider.dart';
@@ -40,8 +40,9 @@ class ProductServices {
     required BuildContext context,
   }) async {
     List<String> imagesURL = [];
-    String sellerUID = auth.currentUser!.phoneNumber!;
-    Uuid uuid = const Uuid();
+    //  String sellerUID = auth.currentUser!.phoneNumber!;
+    //  Uuid uuid = const Uuid();
+/*
 
     await Future.forEach(images, (image) async {
       String imageName = '$sellerUID${uuid.v1().toString()}';
@@ -50,6 +51,7 @@ class ProductServices {
       String imageURL = await ref.getDownloadURL();
       imagesURL.add(imageURL);
     });
+*/
 
     context
         .read<SellerProductProvider>()
@@ -132,7 +134,6 @@ class ProductServices {
           .collection('productSaleData')
           .doc(productID)
           .collection('purchase_history')
-          
           .snapshots()
           .map((snapshot) => snapshot.docs.map((doc) {
                 return UserProductModel.fromMap(doc.data());

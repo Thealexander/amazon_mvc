@@ -10,7 +10,7 @@ class AuthProvider extends ChangeNotifier {
     notifyListeners();
   }
 
-    upDateverificationId({required String verID}) {
+  upDateverificationId({required String verID}) {
     verificationId = verID;
     notifyListeners();
   }

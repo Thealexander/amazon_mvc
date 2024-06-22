@@ -60,6 +60,9 @@ class AuthServices {
       AuthCredential credential = PhoneAuthProvider.credential(
         verificationId: context.read<custom.AuthProvider>().verificationId,
         smsCode: otp,
+        // actualizar  la version de gradle \
+        //https://docs.gradle.org/current/userguide/compatibility.html
+        //https://services.gradle.org/distributions/
       );
       await auth.signInWithCredential(credential);
       Navigator.push(

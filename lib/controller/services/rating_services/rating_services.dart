@@ -3,7 +3,7 @@
 import 'dart:developer';
 import 'dart:io';
 import 'package:amazon_app/controller/provier/rating_provider/rating_provider.dart';
-import 'package:firebase_storage/firebase_storage.dart';
+//import 'package:firebase_storage/firebase_storage.dart';
 import 'package:flutter/material.dart';
 import 'package:image_picker/image_picker.dart';
 import 'package:provider/provider.dart';
@@ -37,16 +37,17 @@ class RatingServices {
     required BuildContext context,
   }) async {
     List<String> imagesURL = [];
-    String sellerUID = auth.currentUser!.phoneNumber!;
-    Uuid uuid = const Uuid();
-
-    await Future.forEach(images, (image) async {
+    //String sellerUID = auth.currentUser!.phoneNumber!;
+    // Uuid uuid = const Uuid();
+/*
+   await Future.forEach(images, (image) async {
       String imageName = '$sellerUID${uuid.v1().toString()}';
       Reference ref = storage.ref().child('Product_Images').child(imageName);
       await ref.putFile(File(image.path));
       String imageURL = await ref.getDownloadURL();
       imagesURL.add(imageURL);
     });
+ */
 
     context.read<RatingProvider>().updateProductImagesURL(imageURLs: imagesURL);
   }
