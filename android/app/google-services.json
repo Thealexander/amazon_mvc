@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "411858811838",
+    "project_id": "mvc-97d4a",
+    "storage_bucket": "mvc-97d4a.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:411858811838:android:9999019a19b6e50cbe17ef",
+        "android_client_info": {
+          "package_name": "com.amaxonmvc.app"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDEdrnn6W_YSInnIj5u4eHbIQfKk_jHdLs"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
