@@ -1,8 +1,7 @@
+import '../home/home_screen.dart';
 import 'package:amazon_app/constants/common_functions.dart';
 import 'package:amazon_app/utils/colors.dart';
 import 'package:flutter/material.dart';
-
-import '../home/home_screen.dart';
 
 class MenuScreen extends StatefulWidget {
   const MenuScreen({super.key});

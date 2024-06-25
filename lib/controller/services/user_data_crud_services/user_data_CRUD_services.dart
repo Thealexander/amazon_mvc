@@ -14,7 +14,7 @@ class UserDataCRUD {
     required BuildContext context,
   }) async {
     try {
-      await firestores
+      await firestore
           .collection('users')
           .doc(auth.currentUser!.phoneNumber)
           .set(userModel.toMap())

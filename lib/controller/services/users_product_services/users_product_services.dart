@@ -1,15 +1,11 @@
-// ignore_for_file: avoid_function_literals_in_foreach_calls
-
+import '../../../constants/common_functions.dart';
+import '../../../model/product_model.dart';
 import 'dart:developer';
-
 import 'package:amazon_app/constants/constants.dart';
 import 'package:amazon_app/model/user_product_model.dart';
 import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:flutter/material.dart';
 import 'package:uuid/uuid.dart';
-
-import '../../../constants/common_functions.dart';
-import '../../../model/product_model.dart';
 
 class UsersProductService {
   static Future<List<ProductModel>> getProducts(String productName) async {

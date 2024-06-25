@@ -1,3 +1,6 @@
+import '../../../constants/constants.dart';
+import '../../../controller/services/product_services/product_services.dart';
+import '../home/home_screen.dart';
 import 'dart:developer';
 import 'package:amazon_app/constants/common_functions.dart';
 import 'package:amazon_app/controller/services/users_product_services/users_product_services.dart';
@@ -5,10 +8,6 @@ import 'package:amazon_app/model/user_product_model.dart';
 import 'package:amazon_app/utils/colors.dart';
 import 'package:flutter/material.dart';
 import 'package:razorpay_flutter/razorpay_flutter.dart';
-
-import '../../../constants/constants.dart';
-import '../../../controller/services/product_services/product_services.dart';
-import '../home/home_screen.dart';
 
 class CartScreen extends StatefulWidget {
   const CartScreen({super.key});
@@ -493,7 +492,8 @@ class _CartScreenState extends State<CartScreen> {
                                   ),
                                 );
                               })
-                        ],                      );
+                        ],
+                      );
                     }
                     if (snapshot.hasError) {
                       return const Text('Opps! Error Found');

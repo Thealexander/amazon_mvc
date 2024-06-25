@@ -51,7 +51,6 @@ dependencies:
   firebase_auth: ^5.1.0
 
   firebase_storage: any
-  persistent_bottom_nav_bar: ^5.0.2
 dev_dependencies:
   flutter_test:
     sdk: flutter

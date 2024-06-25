@@ -4,7 +4,7 @@ import 'package:amazon_app/view/user/menu/menu_screen.dart';
 import 'package:amazon_app/view/user/profile/profile_screen.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
-import 'package:persistent_bottom_nav_bar/persistent_tab_view.dart';
+import 'package:persistent_bottom_nav_bar_v2/persistent_bottom_nav_bar_v2.dart';
 
 import '../../../utils/colors.dart';
 
@@ -18,40 +18,44 @@ class UserBottomNavBar extends StatefulWidget {
 class _UserBottomNavBarState extends State<UserBottomNavBar> {
   PersistentTabController controller = PersistentTabController(initialIndex: 0);
 
-  List<Widget> _buildScreens() {
+  List<PersistentTabConfig> _navBarsItems() {
     return [
-      const HomeScreen(),
-      const ProfileScreen(),
-      const CartScreen(),
-      const MenuScreen()
-    ];
-  }
-
-  List<PersistentBottomNavBarItem> _navBarsItems() {
-    return [
-      PersistentBottomNavBarItem(
-        icon: const Icon(CupertinoIcons.home),
-        title: "Home",
-        activeColorPrimary: teal,
-        inactiveColorPrimary: black,
+      PersistentTabConfig(
+        screen: const HomeScreen(),
+        item: ItemConfig(
+          title: "Home",
+          icon: const Icon(CupertinoIcons.home),
+          activeForegroundColor: teal,
+          inactiveForegroundColor: black,
+        ),
       ),
-      PersistentBottomNavBarItem(
-        icon: const Icon(CupertinoIcons.person),
-        title: "You",
-        activeColorPrimary: teal,
-        inactiveColorPrimary: black,
+      PersistentTabConfig(
+        screen: const ProfileScreen(),
+        item: ItemConfig(
+          title: "You",
+          icon: const Icon(CupertinoIcons.person),
+          activeForegroundColor: teal,
+          inactiveForegroundColor: black,
+        ),
       ),
-      PersistentBottomNavBarItem(
-        icon: const Icon(CupertinoIcons.cart),
-        title: "Cart",
-        activeColorPrimary: teal,
-        inactiveColorPrimary: black,
+      PersistentTabConfig(
+        screen: const CartScreen(),
+        item: ItemConfig(
+          title: "Cart",
+          icon: const Icon(CupertinoIcons.cart),
+          activeForegroundColor: teal,
+          inactiveForegroundColor: black,
+          //selectedAnimationDuration: const Duration(milliseconds: 200),
+        ),
       ),
-      PersistentBottomNavBarItem(
-        icon: const Icon(Icons.menu),
-        title: "Menu",
-        activeColorPrimary: teal,
-        inactiveColorPrimary: black,
+      PersistentTabConfig(
+        screen: const MenuScreen(),
+        item: ItemConfig(
+          title: "Menu",
+          icon: const Icon(Icons.menu),
+          activeForegroundColor: teal,
+          inactiveForegroundColor: black,
+        ),
       ),
     ];
   }
@@ -59,32 +63,24 @@ class _UserBottomNavBarState extends State<UserBottomNavBar> {
   @override
   Widget build(BuildContext context) {
     return PersistentTabView(
-      context,
+      tabs: _navBarsItems(),
       controller: controller,
-      screens: _buildScreens(),
-      items: _navBarsItems(),
-      confineInSafeArea: true,
+      navBarBuilder: (navBarConfig) => Style3BottomNavBar(
+        navBarConfig: navBarConfig,
+        navBarDecoration: NavBarDecoration(
+            borderRadius: BorderRadius.circular(10.0), color: Colors.white),
+      ),
+      //  confineInSafeArea: true,
       backgroundColor: Colors.white,
       handleAndroidBackButtonPress: true,
       resizeToAvoidBottomInset: true,
       stateManagement: true,
-      hideNavigationBarWhenKeyboardShows: true,
-      decoration: NavBarDecoration(
-        borderRadius: BorderRadius.circular(10.0),
-        colorBehindNavBar: Colors.white,
-      ),
       popAllScreensOnTapOfSelectedTab: true,
       popActionScreens: PopActionScreensType.all,
-      itemAnimationProperties: const ItemAnimationProperties(
-        duration: Duration(milliseconds: 200),
-        curve: Curves.ease,
-      ),
-      screenTransitionAnimation: const ScreenTransitionAnimation(
-        animateTabTransition: true,
-        curve: Curves.ease,
-        duration: Duration(milliseconds: 200),
-      ),
-      navBarStyle: NavBarStyle.style3,
+      screenTransitionAnimation: const ScreenTransitionAnimation.none(
+          //     curve: Curves.ease,
+          //     duration: Duration(milliseconds: 200),
+          ),
     );
   }
 }
