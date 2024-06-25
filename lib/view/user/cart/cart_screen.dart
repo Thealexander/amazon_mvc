@@ -1,7 +1,4 @@
-// ignore_for_file: use_build_context_synchronously
-
 import 'dart:developer';
-
 import 'package:amazon_app/constants/common_functions.dart';
 import 'package:amazon_app/controller/services/users_product_services/users_product_services.dart';
 import 'package:amazon_app/model/user_product_model.dart';
@@ -496,8 +493,7 @@ class _CartScreenState extends State<CartScreen> {
                                   ),
                                 );
                               })
-                        ],
-                      );
+                        ],                      );
                     }
                     if (snapshot.hasError) {
                       return const Text('Opps! Error Found');

@@ -1,4 +1,3 @@
-
 import 'package:amazon_app/constants/common_functions.dart';
 import 'package:amazon_app/controller/provier/product_provider/product_provider.dart';
 import 'package:amazon_app/model/product_model.dart';
@@ -7,7 +6,6 @@ import 'package:carousel_slider/carousel_slider.dart';
 import 'package:flutter/material.dart';
 import 'package:page_transition/page_transition.dart';
 import 'package:provider/provider.dart';
-
 import '../../../utils/colors.dart';
 
 class InventoryScreen extends StatefulWidget {

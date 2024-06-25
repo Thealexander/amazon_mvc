@@ -4,7 +4,8 @@ import 'package:amazon_app/view/user/menu/menu_screen.dart';
 import 'package:amazon_app/view/user/profile/profile_screen.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
-import 'package:persistent_bottom_nav_bar_v2/persistent-tab-view.dart';
+import 'package:persistent_bottom_nav_bar/persistent_tab_view.dart';
+
 import '../../../utils/colors.dart';
 
 class UserBottomNavBar extends StatefulWidget {

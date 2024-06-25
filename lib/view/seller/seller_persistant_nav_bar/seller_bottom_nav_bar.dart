@@ -1,6 +1,6 @@
 import 'package:amazon_app/view/seller/inventory/inventory_screen.dart';
 import 'package:flutter/material.dart';
-import 'package:persistent_bottom_nav_bar_v2/persistent-tab-view.dart';
+import 'package:persistent_bottom_nav_bar/persistent_tab_view.dart';
 import '../../../utils/colors.dart';
 import '../monitor/monitor_screen.dart';
 

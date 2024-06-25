@@ -1,11 +1,9 @@
-// ignore_for_file: use_build_context_synchronously
-
 import 'dart:io';
-import 'package:amazon/constants/common_functions.dart';
-import 'package:amazon/constants/constants.dart';
-import 'package:amazon/controller/provier/product_provider/product_provider.dart';
-import 'package:amazon/model/product_model.dart';
-import 'package:amazon/view/seller/add_product_screen/widget/product_details_common_textField.dart';
+import 'package:amazon_app/constants/common_functions.dart';
+import 'package:amazon_app/constants/constants.dart';
+import 'package:amazon_app/controller/provier/product_provider/product_provider.dart';
+import 'package:amazon_app/model/product_model.dart';
+import 'package:amazon_app/view/seller/add_product_screen/widget/product_details_common_textField.dart';
 import 'package:carousel_slider/carousel_slider.dart';
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';

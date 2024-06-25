@@ -1,7 +1,4 @@
-// ignore_for_file: use_build_context_synchronously
-
 import 'dart:developer';
-
 import 'package:amazon_app/constants/common_functions.dart';
 import 'package:amazon_app/constants/constants.dart';
 import 'package:amazon_app/controller/provier/address_provider.dart';
@@ -705,7 +702,7 @@ class HomePageAppBar extends StatelessWidget {
                       left: width * 0.03,
                     ),
                     child: Text(
-                      'Search Amazon.in',
+                      'Search Amazon',
                       style: Theme.of(context)
                           .textTheme
                           .bodySmall!

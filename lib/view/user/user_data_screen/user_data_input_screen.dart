@@ -2,7 +2,6 @@ import 'package:amazon_app/constants/common_functions.dart';
 import 'package:amazon_app/controller/services/user_data_crud_services/user_data_CRUD_services.dart';
 import 'package:amazon_app/model/user_model.dart';
 import 'package:flutter/material.dart';
-
 import '../../../constants/constants.dart';
 import '../../../utils/colors.dart';
 

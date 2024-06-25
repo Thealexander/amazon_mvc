@@ -1,19 +1,16 @@
-// ignore_for_file: use_build_context_synchronously, avoid_function_literals_in_foreach_calls
-
+//import 'package:firebase_storage/firebase_storage.dart';
+import '../../../constants/constants.dart';
+import '../../../model/user_product_model.dart';
 import 'dart:developer';
 import 'dart:io';
-
 import 'package:amazon_app/constants/common_functions.dart';
 import 'package:amazon_app/controller/provier/product_provider/product_provider.dart';
 import 'package:amazon_app/model/product_model.dart';
 import 'package:cloud_firestore/cloud_firestore.dart';
-//import 'package:firebase_storage/firebase_storage.dart';
 import 'package:flutter/material.dart';
 import 'package:image_picker/image_picker.dart';
 import 'package:provider/provider.dart';
 import 'package:uuid/uuid.dart';
-import '../../../constants/constants.dart';
-import '../../../model/user_product_model.dart';
 
 class ProductServices {
   static Future getImages({required BuildContext context}) async {

@@ -564,9 +564,9 @@ class UserGreetingsYouScreen extends StatelessWidget {
           RichText(
             text: TextSpan(
               children: [
-                TextSpan(text: 'Hello, ', style: textTheme.bodyLarge),
+                TextSpan(text: 'Hello again, ', style: textTheme.bodyLarge),
                 TextSpan(
-                  text: 'Sanjay',
+                  text: 'Alex',
                   style: textTheme.bodyLarge!.copyWith(
                     fontWeight: FontWeight.bold,
                   ),

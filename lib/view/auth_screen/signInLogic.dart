@@ -1,4 +1,3 @@
-// ignore_for_file: use_build_context_synchronously
 import 'dart:developer';
 import 'package:amazon_app/controller/services/user_data_crud_services/user_data_CRUD_services.dart';
 import 'package:amazon_app/view/auth_screen/auth_screens.dart';

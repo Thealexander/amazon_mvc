@@ -1,6 +1,4 @@
-// ignore_for_file: file_names, unused_local_variable, avoid_function_literals_in_foreach_calls
 import 'dart:developer';
-
 import 'package:amazon_app/constants/common_functions.dart';
 import 'package:amazon_app/constants/constants.dart';
 import 'package:amazon_app/model/address_model.dart';
