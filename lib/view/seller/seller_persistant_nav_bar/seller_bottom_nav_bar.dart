@@ -29,6 +29,7 @@ class _SellerBottomNavBarState extends State<SellerBottomNavBar> {
           title: "Inventory",
           activeForegroundColor: teal,
           inactiveForegroundColor: black,
+          // selectedAnimationDuration: const Duration(milliseconds: 200)
         ),
       ),
       PersistentTabConfig(
@@ -38,6 +39,7 @@ class _SellerBottomNavBarState extends State<SellerBottomNavBar> {
           title: "Monitor",
           activeForegroundColor: teal,
           inactiveForegroundColor: black,
+          //selectedAnimationDuration: const Duration(milliseconds: 200)
         ),
       ),
     ];
