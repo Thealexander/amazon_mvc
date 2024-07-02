@@ -1,6 +1,4 @@
-
 import 'package:flutter/material.dart';
-
 import '../../../../constants/common_functions.dart';
 
 class AddProductCommonTextField extends StatelessWidget {

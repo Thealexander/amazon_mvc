@@ -1,4 +1,4 @@
-//import 'package:firebase_storage/firebase_storage.dart';
+import 'package:firebase_storage/firebase_storage.dart';
 import '../../../constants/constants.dart';
 import '../../../model/user_product_model.dart';
 import 'dart:developer';
@@ -37,9 +37,8 @@ class ProductServices {
     required BuildContext context,
   }) async {
     List<String> imagesURL = [];
-    //  String sellerUID = auth.currentUser!.phoneNumber!;
-    //  Uuid uuid = const Uuid();
-/*
+    String sellerUID = auth.currentUser!.phoneNumber!;
+    Uuid uuid = const Uuid();
 
     await Future.forEach(images, (image) async {
       String imageName = '$sellerUID${uuid.v1().toString()}';
@@ -48,8 +47,6 @@ class ProductServices {
       String imageURL = await ref.getDownloadURL();
       imagesURL.add(imageURL);
     });
-*/
-
     context
         .read<SellerProductProvider>()
         .updateProductImagesURL(imageURLs: imagesURL);
@@ -88,9 +85,9 @@ class ProductServices {
           .where('productSellerID', isEqualTo: auth.currentUser!.phoneNumber)
           .get();
 
-      snapshot.docs.forEach((element) {
+      for (var element in snapshot.docs) {
         sellersProducts.add(ProductModel.fromMap(element.data()));
-      });
+      }
       log(sellersProducts.toList().toString());
     } catch (e) {
       log('error Found');
@@ -115,7 +112,6 @@ class ProductServices {
           .set(productModel.toMap())
           .whenComplete(() {
         log('Data Added');
-
         // CommonFunctions.showSuccessToast(
         //     context: context, message: 'Product Added Successful');
       });

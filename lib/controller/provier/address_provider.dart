@@ -1,6 +1,5 @@
 import 'package:amazon_app/controller/services/user_data_crud_services/user_data_CRUD_services.dart';
 import 'package:flutter/material.dart';
-
 import '../../model/address_model.dart';
 
 class AddressProvider extends ChangeNotifier {

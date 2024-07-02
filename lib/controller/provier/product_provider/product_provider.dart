@@ -1,5 +1,4 @@
 import 'dart:io';
-
 import 'package:amazon_app/controller/services/product_services/product_services.dart';
 import 'package:amazon_app/model/product_model.dart';
 import 'package:flutter/material.dart';

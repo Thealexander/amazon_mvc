@@ -1,5 +1,4 @@
 import 'dart:io';
-
 import 'package:amazon_app/controller/services/rating_services/rating_services.dart';
 import 'package:flutter/material.dart';
 

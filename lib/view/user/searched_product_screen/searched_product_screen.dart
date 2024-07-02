@@ -501,7 +501,7 @@ class _SearchedProductScreenState extends State<SearchedProductScreen> {
                                       text: TextSpan(
                                         children: [
                                           TextSpan(
-                                            text: '₹ ',
+                                            text: '\$ ',
                                             style: textTheme.bodyMedium,
                                           ),
                                           TextSpan(
@@ -520,7 +520,7 @@ class _SearchedProductScreenState extends State<SearchedProductScreen> {
                                           ),
                                           TextSpan(
                                             text:
-                                                '₹${currentProduct.price!.toStringAsFixed(0)}',
+                                                '\$${currentProduct.price!.toStringAsFixed(0)}',
                                             style:
                                                 textTheme.labelMedium!.copyWith(
                                               color: grey,

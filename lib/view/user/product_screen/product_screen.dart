@@ -1,6 +1,5 @@
 import 'dart:developer';
 import 'dart:io';
-
 import 'package:amazon_app/constants/common_functions.dart';
 import 'package:amazon_app/constants/constants.dart';
 import 'package:amazon_app/controller/services/product_services/product_services.dart';
@@ -386,7 +385,7 @@ class _ProductScreenState extends State<ProductScreen> {
                     ),
                     TextSpan(
                       text:
-                          '\t\t₹ ${widget.productModel.price!.toStringAsFixed(0)}',
+                          '\t\t ${widget.productModel.price!.toStringAsFixed(0)}',
                       style: textTheme.displayLarge!.copyWith(
                         color: black,
                         fontWeight: FontWeight.w600,
@@ -396,7 +395,7 @@ class _ProductScreenState extends State<ProductScreen> {
                 ),
               ),
               Text(
-                'M.R.P: ₹ ${widget.productModel.price}',
+                'M.R.P: \$ ${widget.productModel.price}',
                 style: textTheme.labelMedium!.copyWith(
                     color: grey, decoration: TextDecoration.lineThrough),
               ),

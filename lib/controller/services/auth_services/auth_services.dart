@@ -1,5 +1,3 @@
-// ignore_for_file: use_build_context_synchronously
-
 import 'dart:developer';
 import 'package:amazon_app/controller/provier/auth_provider/auth_provider.dart'
     as custom;

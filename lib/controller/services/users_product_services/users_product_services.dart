@@ -20,9 +20,9 @@ class UsersProductService {
           .startAt([productName.toUpperCase()]).endAt(
               ['${productName.toLowerCase()}\uf8ff']).get();
 
-      snapshot.docs.forEach((element) {
+      for (var element in snapshot.docs) {
         sellersProducts.add(ProductModel.fromMap(element.data()));
-      });
+      }
       log(sellersProducts.toList().toString());
     } catch (e) {
       log('error Found');
@@ -165,9 +165,9 @@ class UsersProductService {
           .orderBy('discountPercentage', descending: true)
           .limit(4)
           .get();
-      snapshot.docs.forEach((element) {
+      for (var element in snapshot.docs) {
         sellersProducts.add(ProductModel.fromMap(element.data()));
-      });
+      }
       log(sellersProducts.toList().toString());
     } catch (e) {
       log('error Found');
@@ -184,9 +184,9 @@ class UsersProductService {
           .collection('Products')
           .where('category', isEqualTo: category)
           .get();
-      snapshot.docs.forEach((element) {
+      for (var element in snapshot.docs) {
         sellersProducts.add(ProductModel.fromMap(element.data()));
-      });
+      }
       log(sellersProducts.toList().toString());
     } catch (e) {
       log('error Found');
@@ -238,9 +238,9 @@ class UsersProductService {
           .doc(auth.currentUser!.phoneNumber)
           .collection('myCart')
           .get();
-      snapshot.docs.forEach((element) {
+      for (var element in snapshot.docs) {
         sellersProducts.add(UserProductModel.fromMap(element.data()));
-      });
+      }
       log(sellersProducts.toList().toString());
     } catch (e) {
       log('error Found');

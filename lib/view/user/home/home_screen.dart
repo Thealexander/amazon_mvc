@@ -183,7 +183,7 @@ class _HomeScreenState extends State<HomeScreen> {
                 todaysDealsCarouselController: todaysDealsCarouselController),
             CommonFunctions.divider(),
             otherOfferGridWidget(
-                title: 'Latest Launces in Headphones',
+                title: 'Latest Launches in Headphones',
                 textBtnName: 'Explore More',
                 productPicNamesList: headphonesDeals,
                 offerFor: 'headphones'),
@@ -353,6 +353,7 @@ class TodaysDealHomeScreenWidget extends StatelessWidget {
               crossAxisAlignment: CrossAxisAlignment.start,
               children: [
                 Text(
+                  //agregar una verificacion
                   '${dealOfTheDayProvider.deals[3].discountPercentage}%-${dealOfTheDayProvider.deals[0].discountPercentage}% off | Latest deals.',
                   style: textTheme.displaySmall!.copyWith(
                     fontWeight: FontWeight.w600,

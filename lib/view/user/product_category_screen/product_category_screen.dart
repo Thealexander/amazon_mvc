@@ -1,5 +1,4 @@
 import 'dart:developer';
-
 import 'package:amazon_app/constants/common_functions.dart';
 import 'package:amazon_app/controller/provier/users_product_provider/users_product_provider.dart';
 import 'package:amazon_app/controller/services/users_product_services/users_product_services.dart';
@@ -504,7 +503,7 @@ class _ProductCategoryScreenState extends State<ProductCategoryScreen> {
                                       text: TextSpan(
                                         children: [
                                           TextSpan(
-                                            text: '₹ ',
+                                            text: '\$ ',
                                             style: textTheme.bodyMedium,
                                           ),
                                           TextSpan(
@@ -523,7 +522,7 @@ class _ProductCategoryScreenState extends State<ProductCategoryScreen> {
                                           ),
                                           TextSpan(
                                             text:
-                                                '₹${currentProduct.price!.toStringAsFixed(0)}',
+                                                '\$${currentProduct.price!.toStringAsFixed(0)}',
                                             style:
                                                 textTheme.labelMedium!.copyWith(
                                               color: grey,

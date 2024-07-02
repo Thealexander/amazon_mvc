@@ -122,13 +122,13 @@ class UserDataCRUD {
           .collection('address')
           .get();
 
-      snapshot.docs.forEach((element) {
+      for (var element in snapshot.docs) {
         allAddress.add(AddressModel.fromMap(element.data()));
         AddressModel currentAddresss = AddressModel.fromMap(element.data());
         if (currentAddresss.isDefault == true) {
           defaultAddress = currentAddresss;
         }
-      });
+      }
     } catch (e) {
       log('error Found');
       log(e.toString());
@@ -148,12 +148,12 @@ class UserDataCRUD {
           .collection('address')
           .get();
 
-      snapshot.docs.forEach((element) {
+      for (var element in snapshot.docs) {
         AddressModel currentAddresss = AddressModel.fromMap(element.data());
         if (currentAddresss.isDefault == true) {
           defaultAddress = currentAddresss;
         }
-      });
+      }
     } catch (e) {
       log('error Found');
       log(e.toString());

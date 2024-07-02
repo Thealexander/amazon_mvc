@@ -212,7 +212,7 @@ class _MonitorScreenState extends State<MonitorScreen> {
                                                               .bodySmall!,
                                                         ),
                                                         TextSpan(
-                                                          text: '₹ ${snapshot.data!.fold(
+                                                          text: '\$ ${snapshot.data!.fold(
                                                                 0.0,
                                                                 (previousValue,
                                                                         product) =>
@@ -286,11 +286,11 @@ class _MonitorScreenState extends State<MonitorScreen> {
                                                         .spaceEvenly,
                                                 children: [
                                                   Text(
-                                                    '₹ ${currentModel.discountedPrice.toString()}',
+                                                    '\$ ${currentModel.discountedPrice.toString()}',
                                                     style: textTheme.bodyMedium,
                                                   ),
                                                   Text(
-                                                    '₹ ${currentModel.price.toString()}',
+                                                    '\$ ${currentModel.price.toString()}',
                                                     style: textTheme
                                                         .labelMedium!
                                                         .copyWith(

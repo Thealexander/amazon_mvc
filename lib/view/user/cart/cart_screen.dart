@@ -145,7 +145,7 @@ class _CartScreenState extends State<CartScreen> {
                                 ),
                                 TextSpan(
                                   text:
-                                      '₹ ${cartProducts.fold(0.0, (previousValue, product) => previousValue + (product.productCount! * product.discountedPrice!)).toStringAsFixed(0)}',
+                                      '\$ ${cartProducts.fold(0.0, (previousValue, product) => previousValue + (product.productCount! * product.discountedPrice!)).toStringAsFixed(0)}',
                                   style: textTheme.displaySmall!.copyWith(
                                     fontWeight: FontWeight.bold,
                                   ),
@@ -397,7 +397,7 @@ class _CartScreenState extends State<CartScreen> {
                                             Row(
                                               children: [
                                                 Text(
-                                                  '₹ ${currenProduct.discountedPrice!.toStringAsFixed(0)}',
+                                                  '\$ ${currenProduct.discountedPrice!.toStringAsFixed(0)}',
                                                   style: textTheme
                                                       .displayMedium!
                                                       .copyWith(
@@ -405,7 +405,7 @@ class _CartScreenState extends State<CartScreen> {
                                                               FontWeight.bold),
                                                 ),
                                                 Text(
-                                                  '\tMRP: ₹',
+                                                  '\tMRP: \$',
                                                   style: textTheme.bodySmall!
                                                       .copyWith(
                                                     color: grey,
