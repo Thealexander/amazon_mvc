@@ -1,17 +1,16 @@
+import '../../../controller/services/rating_services/rating_services.dart';
+import '../../../model/user_product_model.dart';
+import '../../../utils/colors.dart';
 import 'dart:developer';
-
 import 'package:amazon_app/constants/common_functions.dart';
 import 'package:amazon_app/controller/provier/users_product_provider/users_product_provider.dart';
 import 'package:amazon_app/controller/services/users_product_services/users_product_services.dart';
 import 'package:amazon_app/model/product_model.dart';
 import 'package:amazon_app/view/user/product_screen/product_screen.dart';
+import 'package:flutter_rating_bar/flutter_rating_bar.dart';
 import 'package:flutter/material.dart';
 import 'package:page_transition/page_transition.dart';
 import 'package:provider/provider.dart';
-import 'package:flutter_rating_bar/flutter_rating_bar.dart';
-import '../../../controller/services/rating_services/rating_services.dart';
-import '../../../model/user_product_model.dart';
-import '../../../utils/colors.dart';
 
 class SearchedProductScreen extends StatefulWidget {
   const SearchedProductScreen({super.key});

@@ -7,6 +7,7 @@ FirebaseAuth auth = FirebaseAuth.instance;
 FirebaseFirestore firestore = FirebaseFirestore.instance;
 FirebaseStorage storage = FirebaseStorage.instance;
 final picker = ImagePicker();
+//TODO: Cambiar por paypal
 const String keySecret = '<Razorpay Secret>';
 const String keyID = '<Razorpay Key ID>';
 

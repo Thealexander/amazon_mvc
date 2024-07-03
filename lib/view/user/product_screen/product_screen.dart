@@ -27,6 +27,9 @@ class ProductScreen extends StatefulWidget {
 }
 
 class _ProductScreenState extends State<ProductScreen> {
+  //TODO: Cambiar por paypal
+
+  
   // ! RAZORPAY CODES (Payment Gateway)
   final razorpay = Razorpay();
 
